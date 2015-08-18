@@ -22,8 +22,9 @@ angular.module('app.auth').factory('authInterceptorService', ['$q', '$location',
         $route.reload();
       },
       function (err) {
-        messageService.addMessage('danger', err.error_description);
+        //messageService.addMessage('danger', err.error_description);
         $log.error(err);
+        $route.reload();
       });
     }
 

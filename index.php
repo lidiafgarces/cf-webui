@@ -153,5 +153,10 @@
     <script src="app/components/serviceBinding/serviceBindingAddCtrl.js"></script>
     <script src="app/components/serviceBinding/serviceBindingDeleteCtrl.js"></script>
     <script src="app/components/serviceBinding/serviceBindingService.js"></script>
+
+    <!-- marketplace component -->
+    <script src="app/components/marketplace/marketplace.js"></script>
+    <script src="app/components/marketplace/marketplaceAddServiceCtrl.js"></script>
+    <script src="app/components/marketplace/marketplaceService.js"></script>
   </body>
 </html>

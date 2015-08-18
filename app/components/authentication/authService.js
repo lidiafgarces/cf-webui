@@ -36,7 +36,13 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
         // save access token and username in session storage
         sessionStorage.setItem('accessToken', response.access_token);
         sessionStorage.setItem('refreshToken', response.refresh_token);
+        sessionStorage.setItem('expiresIn', response.expires_in);
         sessionStorage.setItem('userName', logInData.userName);
+
+        setTimeout(function() {
+          $log.error('Funcion de time out');
+          _refresh();
+        }, 300000);
 
         // set data of authentication object
         _authentication.isAuth = true;
@@ -50,6 +56,7 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
     }).error(function(err, status) {
       $log.error(err);
       _logOut();
+      $route.reload();
       deferred.reject(err);
     });
 
@@ -58,7 +65,7 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
 
   var _refresh = function() {
     var refreshToken = sessionStorage.getItem('refreshToken');
-    var access_token = sessionStorage.getItem('accessToken');
+    var accessToken = sessionStorage.getItem('accessToken');
 
     // data to post
     var data = {
@@ -96,7 +103,7 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
       }
     }).error(function(err, status) {
       $log.error(err);
-      //_logOut();
+      _logOut();
       deferred.reject(err);
     });
 

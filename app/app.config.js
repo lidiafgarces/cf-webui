@@ -25,9 +25,14 @@ angular.module('app').config(['$routeProvider', function($routeProvider) {
       controller: 'SpaceAddServiceCtrl'
     })
   
-    .when('/organizations/:organizationId/spaces/:spaceId/applications/:applicationId', {
+.when('/organizations/:organizationId/spaces/:spaceId/applications/:applicationId', {
       templateUrl: 'app/components/application/applicationDetails.tpl.html',
       controller: 'ApplicationDetailsCtrl'
+    })
+    
+    .when('/marketplace', {
+      templateUrl: 'app/components/marketplace/marketplaceAddService.tpl.html',
+      controller: 'marketplaceAddServiceCtrl'
     })
 
     .otherwise({
