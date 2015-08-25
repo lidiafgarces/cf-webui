@@ -531,7 +531,23 @@ a.button small {
   font-size: 11px;
 }
 
-header aside.button {
+aside.logo {
+  width: 134px;
+  height: 58px;
+  padding-top: 22px;
+  padding-left: 68px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 23px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+aside.logo small {
+  display: block;
+  font-size: 11px;
+}
+
+header aside.logo {
   position: absolute;
   top: 0;
   left: 0;
@@ -867,6 +883,19 @@ footer a:hover {
     border-top: solid 1px #ddd;
   }
   aside#sidebar a.button {
+    display: none;
+  }
+  #main-content h1:before,
+  #main-content h2:before,
+  #main-content h3:before,
+  #main-content h4:before,
+  #main-content h5:before,
+  #main-content h6:before {
+    padding-right: 0;
+    margin-left: 0;
+    content: none;
+  }
+  aside.logo {
     display: none;
   }
   #main-content h1:before,
