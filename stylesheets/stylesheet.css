@@ -469,7 +469,7 @@ header h1 {
 }
 
 header h2 {
-  width: 480px;
+  width: 500px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 22px;
@@ -534,17 +534,18 @@ a.button small {
 }
 
  aside.logo img {
+  position: relative;
   width: 250px;
 
-  padding-top: 35px;
-  padding-left: 10px;
+  
   line-height: 1.2;
 }
 
 header aside.logo {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -280px;
+  margin: auto;
 }
 
 header a.button {
@@ -791,7 +792,9 @@ footer a:hover {
 ================================================== */
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) { }
+@media only screen and (max-width: 959px) {
+
+}
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -820,6 +823,7 @@ footer a:hover {
     margin-left: 0;
     content: none;
   }
+
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -888,9 +892,7 @@ footer a:hover {
     margin-left: 0;
     content: none;
   }
-  aside.logo {
-    display: none;
-  }
+
   #main-content h1:before,
   #main-content h2:before,
   #main-content h3:before,
@@ -907,5 +909,15 @@ footer a:hover {
 @media only screen and (min-width: 480px) and (max-width: 767px) { }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) { }
+@media only screen and (max-width: 479px) { 
+
+}
+
+@media only screen and (max-width: 1530px) { 
+  aside.logo {
+    display: none;
+  }
+}
+
+
 
