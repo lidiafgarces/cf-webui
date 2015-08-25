@@ -542,16 +542,10 @@ aside.logo {
   color: #fff;
 }
 
-aside.logo small {
-  display: block;
-  font-size: 11px;
-}
-
 header aside.logo {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
 
 header a.button {
