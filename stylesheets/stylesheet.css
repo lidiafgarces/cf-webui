@@ -460,17 +460,19 @@ header h1 {
   width: 540px;
   margin-top: 0;
   margin-bottom: 0.2em;
-  font-size: 72px;
+  font-size: 65px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-weight: bolder;
   line-height: 1;
-  color: #fff;
+  color: #ebf8ff;
   letter-spacing: -1px;
 }
 
 header h2 {
-  width: 540px;
+  width: 480px;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal;
   line-height: 1.3;
   color: #9ddcff;
@@ -485,7 +487,7 @@ header h2 {
 
 #content-wrapper {
   padding-top: 30px;
-  border-top: solid 1px #fff;
+  border-top: solid 1px #ebf8ff;
 }
 
 #main-content {
@@ -524,22 +526,19 @@ a.button {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 23px;
   line-height: 1.2;
-  color: #fff;
+  color: #ebf8ff;
 }
 a.button small {
   display: block;
   font-size: 11px;
 }
 
-aside.logo {
-  width: 134px;
-  height: 58px;
-  padding-top: 22px;
-  padding-left: 68px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-  font-size: 23px;
+ aside.logo img {
+  width: 250px;
+
+  padding-top: 35px;
+  padding-left: 10px;
   line-height: 1.2;
-  color: #fff;
 }
 
 header aside.logo {
@@ -580,13 +579,13 @@ pre {
   padding: 20px;
   overflow: auto;
   text-shadow: none;
-  background: #fff;
+  background: #ebf8ff;
   border: solid 1px #f2f2f2;
 }
 pre code {
   padding: 0;
   color: #2879d0;
-  background-color: #fff;
+  background-color: #ebf8ff;
   border: none;
 }
 
