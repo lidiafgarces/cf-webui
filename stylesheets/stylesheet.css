@@ -531,7 +531,7 @@ a.button small {
   font-size: 11px;
 }
 
-header div.button {
+header span.button {
   position: absolute;
   top: 0;
   right: 0;
