@@ -531,7 +531,7 @@ a.button small {
   font-size: 11px;
 }
 
-header span.button {
+header aside.button {
   position: absolute;
   top: 0;
   right: 0;
@@ -544,16 +544,6 @@ header a.button {
   right: 0;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
-
-aside button {
-  display: block;
-  width: 138px;
-  padding-left: 64px;
-  margin-bottom: 20px;
-  font-size: 21px;
-  background: transparent url(../images/download-button.png) 0 0 no-repeat;
-}
-
 aside a.button {
   display: block;
   width: 138px;
