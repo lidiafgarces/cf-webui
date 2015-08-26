@@ -23,6 +23,7 @@ angular.module('app.application').controller('ApplicationDetailsCtrl', ['$rootSc
   $scope.state = '';
   
   $scope.buildPack = '';
+  
   $scope.startCommand = '';
   $scope.packageState = '';
   

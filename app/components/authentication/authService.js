@@ -1,4 +1,4 @@
-angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_ENDPOINT', function($http, $log, $q, UAA_ENDPOINT) {
+angular.module('app.auth').factory('authService', ['$http', '$log', '$q', '$injector', 'UAA_ENDPOINT', function($http, $log, $q, $injector, UAA_ENDPOINT) {
   var authServiceFactory = {};
 
   var _authentication = {
@@ -16,9 +16,9 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
       'scope': ''
 
     };
-    //     'response_type': 'token'
+    //'response_type': 'token'
  
-    // 'client_id': 'cf'
+    //'client_id': 'cf'
     //'redirect_uri': 'https://cf-webui.cfapps.io/#organizations'
 
     // http headers
@@ -41,8 +41,8 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
 
         setTimeout(function() {
           $log.error('Funcion de time out');
-          _refresh();
-        }, 300000);
+          _logOut();
+        }, 1500000);
 
         // set data of authentication object
         _authentication.isAuth = true;
@@ -55,9 +55,11 @@ angular.module('app.auth').factory('authService', ['$http', '$log', '$q', 'UAA_E
       }
     }).error(function(err, status) {
       $log.error(err);
-      _logOut();
-      $route.reload();
+      //_logOut();
       deferred.reject(err);
+      //var messageService = $injector.get('messageService');
+      //messageService.addMessage('danger', 'Login failed.');
+      $log.error('¿Mostró el mensaje?');
     });
 
     return deferred.promise;

@@ -17,5 +17,7 @@ angular.module('app.logIn').controller('LogInCtrl', ['$scope', '$location', '$lo
   $scope.logOut = function() {
     authService.logOut();
     $location.path('/login');
+    messageService.addMessage('Succesful logout');
+    $log.error('deslogueado');
   };
 }]);

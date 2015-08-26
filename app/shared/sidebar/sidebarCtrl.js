@@ -50,5 +50,7 @@ angular.module('app.sidebar').controller('SidebarCtrl', ['$rootScope', '$scope',
   $scope.isActive = function(path) {
     return ($location.path().indexOf(path) > -1);
   };
+
+  $log.error('sidebar');
   
 }]);

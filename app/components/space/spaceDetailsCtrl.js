@@ -12,7 +12,7 @@ angular.module('app.space').controller('SpaceDetailsCtrl', ['$rootScope', '$scop
   $scope.nrOfServices = 0;
 
   // service summary from api
-  var getSpaceSummaryPromise = spaceService.getSpaceSummary($scope.id);
+  var getSpaceSummaryPromise = spaceService.getSpaceSummary($scope.spaceId);
   getSpaceSummaryPromise.then(function(response) {
     $scope.name = response.data.name;
 

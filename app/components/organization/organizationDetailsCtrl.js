@@ -23,6 +23,8 @@ angular.module('app.organization').controller('OrganizationDetailsCtrl', ['$root
   $scope.nrOfOrganizationUsers = 0;
   $scope.allUsersForOrganization = [];
 
+  $log.error('Arranca controller de organizationDetails');
+
   // get particular organization
   organizationService.getOrganization($scope.id).then(function(response) {
     var data = response.data;
@@ -46,6 +48,8 @@ angular.module('app.organization').controller('OrganizationDetailsCtrl', ['$root
     $log.error(err);
   });
 
+
+
   // get spaces for the organization
   $scope.getSpacesForTheOrganization = function() {
     // clear spaces array on reload
@@ -53,7 +57,7 @@ angular.module('app.organization').controller('OrganizationDetailsCtrl', ['$root
       $scope.spaces.length = 0;
     }
 
-    organizationService.getSpacesForTheOrganization($scope.id).then(function(response) {
+    organizationService.getSpacesForTheOrganization($scope.id, false).then(function(response) {
       var data = response.data;
       $scope.nrOfSpaces = data.total_results;
 
